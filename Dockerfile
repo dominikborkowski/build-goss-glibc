@@ -10,6 +10,6 @@ ENV GO111MODULE=on
 
 # compile and clean
 RUN go get github.com/aelsabbahy/goss/cmd/goss@v${GOSS_VER} && \
-    mv ${GOPATH}/bin/goss ${GOPATH}/bin/goss-glibc
+    mv ${GOPATH}/bin/goss ${GOPATH}/bin/goss-glibc && \
     strip ${GOPATH}/bin/* && \
     go clean -cache -modcache
